@@ -1,18 +1,142 @@
+:root {
+	--wdt-default-bg: #202125;
+	--wdt-default-color: #fff;
+	--wdt-default-color-90: #fffd;
+	--wdt-default-color-60: #fffa;
+	--wdt-default-color-30: #fff5;
+	--wdt-default-color-15: #fff3;
+	--wdt-default-color-05: #ffffff1a;
+	--wdt-focus: #33baff;
+	--wdt-focus-50: rgba(17, 148, 187, 0.43);
+	--wdt-focus-20: rgba(17, 148, 187, 0.2);
+	--theme-background-color:#373b3e!important;
+	--theme-color-folder-selected: rgba(17, 148, 187, 0.43)!important;
+}
+  
 body {
-  background: url('https://media.giphy.com/media/3o7WTDJQVuYwhhuLhC/giphy.gif') !important;
+	/* filter: invert(1)!important; */
 }
 
-#masthead,
-#primary {
-  -webkit-filter: invert(100%);
-  filter: invert(100%);
-  background-color: #fff;
-  padding: 20px !important;
+/* ============================================================================================== */
+/* =======  GENERAL  ============================================================================ */
+/* ============================================================================================== */
+
+.wrike-panel-root,
+.x-panel-ghost, 
+.wrike-panel-light-panel,
+.wspace-dashboard-card					{ background:var(--wdt-default-bg)!important; color:var(--wdt-default-color)!important; }
+
+
+.menu-item .menu-item-title 			{ color:var(--wdt-default-color-60)!important; }
+.menu-item:not(.wrike-disabled).active 	{ color:var(--wdt-default-color)!important; border-color:var(--wdt-focus)!important }
+button.skin-pseudo 						{ color:var(--wdt-default-color-90)!important; }
+wrike-menu-button						{ color:var(--wdt-default-color-60)!important; }
+
+.x-layout-split							{ background:var(--theme-background-color)!important; }
+wrike-loader							{ background:var(--wdt-default-bg)!important; }
+
+
+/* ============================================================================================== */
+/* =======  CONTEXT MENU  ======================================================================= */
+/* ============================================================================================== */
+
+.w4-shadow-frame, 
+.wspace_timeTrackerPanel_sticker		{ box-shadow: 0 2px 6px #000000; }
+.x-menu,
+wrike-menu-v2 .menu-panel				{ background-color: var(--wdt-default-bg)!important; border:1px solid var(--wdt-default-color-15)!important;  }
+a.x-menu-item,
+wrike-menu-v2 .select-list-item 		{ color: var(--wdt-default-color-90)!important; }
+wrike-menu-v2 .select-list-item.is-focused,
+.x-menu-item-active						{ background-color: var(--wdt-default-color-15)!important; }
+
+.x-menu-sep							 	{ border-bottom-color:var(--wdt-default-color-15)!important; background:transparent!important; }
+wrike-divider .divider-section::after, 
+wrike-divider .divider-section::before 	{ border-top-color:var(--wdt-default-color-15)!important; }
+wrike-divider.task-list-group-divider 	{ border-top-color:var(--wdt-default-color-15)!important; }
+wrike-divider.task-list-group-divider .divider-section::after,
+wrike-divider.task-list-group-divider .divider-section::before 	{ border-top-color:transparent!important; }
+
+.divider-header							{ color:var(--wdt-default-color-60)!important }
+
+/* ============================================================================================== */
+/* =======  SIDEBAR  ============================================================================ */
+/* ============================================================================================== */
+
+body.dpu #folderTreeView				{ background:var(--theme-background-color)!important; }
+#folder-tab								{ background:var(--theme-background-color)!important; }
+.dpu .wspace-navigation-view .wspace-tree-color { width:10px !important; }
+.dpu .wspace-navigation-view .wspace-tree-sub-root .wspace-tree-branch { padding-left:0!important; }
+body.dpu .wspace-navigation-view .wspace-tree-sub-root .x-tree-node-el { padding:0!important; }
+.dpu .wspace-navigation-view .wspace-tree-title { z-index: 52!important; position: relative!important; /*background: rgba(49, 58, 66, 0.85)!important;*/ padding-left: 10px!important; }
+
+
+/* ============================================================================================== */
+/* =======  LEFT COLUMN  ======================================================================== */
+/* ============================================================================================== */
+
+ws-folder-header-top 					{ background:var(--wdt-default-bg)!important; color:var(--wdt-default-color)!important; border-bottom-color:var(--wdt-default-color-15)!important; }
+ws-toolbar								{ border-bottom-color:var(--wdt-default-color-15)!important; }
+
+.breadcrumbs__container .breadcrumbs 	{ color:var(--wdt-default-color-60)!important }
+.breadcrumbs__container .breadcrumbs__link:not(.breadcrumbs__link--disabled):not(.breadcrumbs__link--not-clickable):hover, 
+.breadcrumbs__container .breadcrumbs__link:not(.breadcrumbs__link--disabled):not(.breadcrumbs__link--not-clickable):focus {
+	color:var(--wdt-focus)!important
 }
-#masthead {
-  background: none;
-}
-#masthead img, #primary img {
-  -webkit-filter: invert(100%);
-  filter: invert(100%);
-}
+
+
+.folder-header-toolbar,
+.browse-view-task-creation,
+.show-descendants-item 					{ background:var(--wdt-default-bg)!important; color:var(--wdt-default-color)!important; border-bottom-color:var(--wdt-default-color-15)!important; }
+.show-descendants-item__text 			{ color:var(--wdt-default-color-90)!important; }
+
+wrike-task-list							{ background:var(--wdt-default-bg)!important; color:var(--wdt-default-color)!important; }
+wrike-task-title						{ color:var(--wdt-default-color-90)!important; }
+.task-info-container					{ border-bottom-color:var(--wdt-default-color-15)!important }
+.task-status							{ color:var(--wdt-focus)!important }
+
+/* task list */
+.task-block.active						{ background:var(--wdt-focus-50)!important; }
+.task-block:hover						{ background:var(--wdt-focus-20)!important; }
+.task-block:hover .task-block__wrapper::before, 
+.task-block:hover .task-block__wrapper::after { background:var(--wdt-focus-20)!important; }
+.task-block.active .task-block__wrapper::before, 
+.task-block.active .task-block__wrapper::after { background:var(--wdt-focus)!important; }
+
+
+/* ============================================================================================== */
+/* =======  RIGHT COLUMN  ======================================================================= */
+/* ============================================================================================== */
+
+.wspace-task-widgets-title-view textarea,
+ws-task-title .title-field				{ background:var(--wdt-default-bg)!important; color:var(--wdt-default-color)!important; }
+.wspace-task-widgets-author				{ color:var(--wdt-default-color)!important; }
+
+.wspace-task-settings-button			{ color:var(#fff)!important; text-shadow:0 1px 1px #fff!important; filter:invert(1)!important; font-weight: bold!important; }
+.wspace-task-settings-button.x-btn-over	{ filter:invert(0)!important; text-shadow: none!important; color:var(--wdt-focus)!important; }
+/* .wspace-task-settings-button.task-view-setting-button-facelifted { color:var(#fff)!important; } */
+
+.w4-task-statebar, 
+.wspace-task-settings-bar, 
+.wspace-task-widgets-approvals-bar 		{ border-top: 1px solid rgba(255, 255, 255, 0.16); background: var(--wdt-default-color-05); }
+ws-auto-updates-mode-switcher			{ background:var(--wdt-default-bg)!important; }
+ws-task-customfield-list				{ border-color:var(--wdt-default-color-15)!important; }
+
+.le-placeholder							{ color:var(--wdt-default-color-30)!important; }
+.le-toolbar								{ background:var(--wdt-default-bg)!important; }
+
+/* comment stream */
+.stream-entry							{ background:var(--wdt-default-bg)!important; color:var(--wdt-default-color)!important; }
+.stream-entry .comment-changes .changes-item { color:var(--wdt-default-color-60)!important; }
+.stream-entry .highlight				{ color:var(--wdt-focus)!important; }
+.stream-entry .comment .date-container .date { background:var(--wdt-default-bg)!important; color:var(--wdt-default-color-60)!important; }
+
+/* comment editor */
+.stream-comment-box .editor-outline,
+.wspace-task-widgets-comment .main-ct	{ color:var(--wdt-default-color)!important; background-color:var(--wdt-default-bg)!important; border-top:1px solid var(--wdt-default-color-15)!important; }
+.stream-comment-box .attach-button:not(:hover) { filter:invert(1);  }
+.stream-comment-box emoji-button:not(:hover) .button-icon svg { color:var(--wdt-default-color-60)!important; }
+.wspace-task-widgets-comment .placeholder { color:var(--wdt-default-color-60)!important;  }
+.stream-comment-box .editor-markdown-syntax { color:var(--wdt-default-color-60)!important; background:var(--wdt-default-color-15); }
+.stream-comment-box .editor_commit		{ background:var(--wdt-focus)!important; }
+.activity-stream-textarea-ce .CodeMirror{ color:var(--wdt-default-color)!important; background-color:var(--wdt-default-bg)!important; }
+.CodeMirror div.CodeMirror-cursor		{ border-left-color:var(--wdt-default-color)!important; }

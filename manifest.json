@@ -1,14 +1,17 @@
 {
   "manifest_version": 2,
 
-  "name": "Modify CSS and HTML",
+  "name": "Wrike Dark Theme Hack",
   "version": "0.1.0",
-  "description": "Lateral blog post demo extension",
+  "description": "This is a tiny chrome extension injecting custom style into to hack in a dark theme.",
 
   "content_scripts": [{
     "css": ["styles.css"],
     "js": ["content.js"],
-    "matches": ["https://blog.lateral.io/*"]
-  }]
+    "matches": ["https://www.wrike.com/workspace.htm*"]
+  }],
 
+  "web_accessible_resources" : [
+	"styles.css", "editor.css", "content.js" 
+  ]
 }
