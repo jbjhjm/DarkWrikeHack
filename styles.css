@@ -1,21 +1,4 @@
-:root {
-	--wdt-default-bg: #202125;
-	--wdt-default-color: #fff;
-	--wdt-default-color-90: #fffd;
-	--wdt-default-color-60: #fffa;
-	--wdt-default-color-30: #fff5;
-	--wdt-default-color-15: #fff3;
-	--wdt-default-color-05: #ffffff1a;
-	--wdt-focus: #33baff;
-	--wdt-focus-50: rgba(17, 148, 187, 0.43);
-	--wdt-focus-20: rgba(17, 148, 187, 0.2);
-	--theme-background-color:#373b3e!important;
-	--theme-color-folder-selected: rgba(17, 148, 187, 0.43)!important;
-}
-  
-body {
-	/* filter: invert(1)!important; */
-}
+@import 'variables.css';
 
 /* ============================================================================================== */
 /* =======  GENERAL  ============================================================================ */
@@ -121,10 +104,22 @@ ws-task-title .title-field				{ background:var(--wdt-default-bg)!important; colo
 ws-auto-updates-mode-switcher			{ background:var(--wdt-default-bg)!important; }
 ws-task-customfield-list				{ border-color:var(--wdt-default-color-15)!important; }
 
+/* description editor */
 .le-placeholder							{ color:var(--wdt-default-color-30)!important; }
 .le-toolbar								{ background:var(--wdt-default-bg)!important; }
+.le-toolbar.toolbar-style-subtle [wrike-button-v2]:not(:disabled).skin-action, 
+.le-toolbar.toolbar-style-subtle [wrike-button-v2]:not(:disabled).skin-critical, 
+.le-toolbar.toolbar-style-subtle [wrike-button-v2]:not(:disabled).skin-action:hover, 
+.le-toolbar.toolbar-style-subtle [wrike-button-v2]:not(:disabled).skin-critical:hover, 
+.le-toolbar.toolbar-style-subtle [wrike-button-v2]:not(:disabled).skin-action:focus, 
+.le-toolbar.toolbar-style-subtle [wrike-button-v2]:not(:disabled).skin-critical:focus, 
+.le-toolbar.toolbar-style-subtle [wrike-button-v2]:not(:disabled).skin-action:active, 
+.le-toolbar.toolbar-style-subtle [wrike-button-v2]:not(:disabled).skin-critical:active 
+										{ background:var(--wdt-focus)!important; color:var(--wdt-default-color)!important; }
 
 /* comment stream */
+.stream-entry .expand-link, 
+.stream-entry .expand-link-loading		{ background:var(--wdt-focus-20)!important; color:var(--wdt-focus)!important; }
 .stream-entry							{ background:var(--wdt-default-bg)!important; color:var(--wdt-default-color)!important; }
 .stream-entry .comment-changes .changes-item { color:var(--wdt-default-color-60)!important; }
 .stream-entry .highlight				{ color:var(--wdt-focus)!important; }
@@ -140,3 +135,10 @@ ws-task-customfield-list				{ border-color:var(--wdt-default-color-15)!important
 .stream-comment-box .editor_commit		{ background:var(--wdt-focus)!important; }
 .activity-stream-textarea-ce .CodeMirror{ color:var(--wdt-default-color)!important; background-color:var(--wdt-default-bg)!important; }
 .CodeMirror div.CodeMirror-cursor		{ border-left-color:var(--wdt-default-color)!important; }
+
+
+/* ============================================================================================== */
+/* =======  CREATE TASK OVERLAY  ================================================================ */
+/* ============================================================================================== */
+
+.wspace-task-body .ext-el-mask			{ background:#000 }

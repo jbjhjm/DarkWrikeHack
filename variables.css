@@ -1,0 +1,14 @@
+:root {
+	--wdt-default-bg: #202125!important;
+	--wdt-default-color: #fff!important;
+	--wdt-default-color-90: #fffd!important;
+	--wdt-default-color-60: #fffa!important;
+	--wdt-default-color-30: #fff5!important;
+	--wdt-default-color-15: #fff3!important;
+	--wdt-default-color-05: #ffffff1a!important;
+	--wdt-focus: #33baff!important;
+	--wdt-focus-50: rgba(17, 148, 187, 0.43)!important;
+	--wdt-focus-20: rgba(17, 148, 187, 0.2)!important;
+	--theme-background-color:#373b3e!important;
+	--theme-color-folder-selected: rgba(17, 148, 187, 0.43)!important;
+}

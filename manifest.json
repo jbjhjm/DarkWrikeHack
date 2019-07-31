@@ -6,12 +6,12 @@
   "description": "This is a tiny chrome extension injecting custom style into to hack in a dark theme.",
 
   "content_scripts": [{
-    "css": ["styles.css"],
+    "css": ["variables.css","styles.css"],
     "js": ["content.js"],
     "matches": ["https://www.wrike.com/workspace.htm*"]
   }],
 
   "web_accessible_resources" : [
-	"styles.css", "editor.css", "content.js" 
+	"styles.css", "editor.css", "content.js" , "variables.css"
   ]
 }
