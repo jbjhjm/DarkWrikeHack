@@ -13,5 +13,9 @@
 
   "web_accessible_resources" : [
 	"styles.css", "editor.css", "content.js" , "variables.css"
+  ],
+
+  "permissions": [
+    "activeTab"
   ]
 }
