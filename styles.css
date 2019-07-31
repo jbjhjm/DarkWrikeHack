@@ -14,6 +14,7 @@
 .menu-item:not(.wrike-disabled).active 	{ color:var(--wdt-default-color)!important; border-color:var(--wdt-focus)!important }
 button.skin-pseudo 						{ color:var(--wdt-default-color-90)!important; }
 wrike-menu-button						{ color:var(--wdt-default-color-60)!important; }
+.menu-item .indicator-locked			{ background:var(--wdt-default-bg)!important;  }
 
 .x-layout-split							{ background:var(--theme-background-color)!important; }
 wrike-loader							{ background:var(--wdt-default-bg)!important; }
@@ -142,3 +143,18 @@ ws-task-customfield-list				{ border-color:var(--wdt-default-color-15)!important
 /* ============================================================================================== */
 
 .wspace-task-body .ext-el-mask			{ background:#000 }
+
+/* ============================================================================================== */
+/* =======  MY WORK  ============================================================================ */
+/* ============================================================================================== */
+
+.x-grid3								{ background:var(--wdt-default-bg)!important; color:var(--wdt-default-color)!important; }
+.wspace-mywork .w4-tasklist-group-row .w4-tasklist-group-row-wrap { border-top:1px solid var(--wdt-default-color-30)!important; 
+											border-bottom:1px solid var(--wdt-default-color-30)!important; }
+.wspace-mywork .w4-tasklist-group-row-body { background:var(--theme-background-color)!important; color:var(--wdt-default-color)!important; }
+.w4-tasklist .x-grid3-row				{ border-top-color:var(--wdt-default-color-15)!important; border-bottom-color:var(--wdt-default-color-15)!important; }
+.w4-tasklist-task-name					{ color:var(--wdt-default-color)!important; }
+.w4-tasklist-task-description			{ color:var(--wdt-default-color-60)!important; }
+
+.wspace-mywork .w4-tasklist .x-grid3-row-selected { background:var(--wdt-focus)!important; }
+.wspace-mywork .x-grid3-row-over		{ background:var(--wdt-focus-50)!important; }
