@@ -1,1 +1,10 @@
-body { background:#ff0!important; }
+@import 'variables.css';
+
+body 										{ background:#111!important; color:var(--wdt-default-color) }
+#innerdocbody 								{ padding-top:15px!important; }
+#innerdocbody.w3-taskview-editor 			{ color:var(--wdt-default-color)!important; }
+#innerdocbody a, #innerdocbody a:visited 	{ color:var(--wdt-focus)!important; }
+.tasklist-done 								{ color:var(--wdt-default-color-60); text-decoration:line-through; }
+.tasklist-not-done:not(:hover) 				{ background-image:none; position:relative; }
+.tasklist-not-done:not(:hover):before 		{ content:""; width:11px; height:11px; background:#000; border:1px solid var(--wdt-default-color-60); 
+												position:absolute; left:0; top: 5px; }
