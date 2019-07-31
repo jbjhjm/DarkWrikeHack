@@ -27,3 +27,5 @@ On the top bar, click "developer mode" on the right, then on the button "load un
 In the dialog, navigate to the folder containing source files and click ok. 
 
 Open / Reload wrike.
+
+_Note_: Using this way to load the extension will show a warning when re-opening the browser/wrike.
