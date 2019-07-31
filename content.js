@@ -1,7 +1,7 @@
 // Track DOM for iframe insert event (the description editor is iframe based)
 var iframeUpdater = function() { 
 
-	var iframes = document.querySelectorAll('iframe');
+	var iframes = document.getElementsByTagName('iframe');
 	var iframe1;
 	for(var i=0; i<iframes.length; i++) {
 		if(iframes[i].getAttribute('name')==='ace_outer') {
@@ -28,7 +28,11 @@ var iframeUpdater = function() {
 	}
 }
 
-var observer = new MutationObserver(iframeUpdater);
+var timeout;
+var observer = new MutationObserver(function() {
+	if(timeout) clearTimeout(timeout);
+	timeout = setTimeout(iframeUpdater,20);
+});
 
 observer.observe(document.body, { subtree:true, attributes: true, childList: true, attributeOldValue: false })
 // document.onload
