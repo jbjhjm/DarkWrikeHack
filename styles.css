@@ -19,6 +19,21 @@ wrike-menu-button						{ color:var(--wdt-default-color-60)!important; }
 .x-layout-split							{ background:var(--theme-background-color)!important; }
 wrike-loader							{ background:var(--wdt-default-bg)!important; }
 
+.wrike-button-checkbox					{ color:var(--wdt-default-color)!important; }
+
+wrike-zero-state [zero-title],
+wrike-zero-state [zero-description]		{ color:var(--wdt-default-color-60)!important; }
+wrike-zero-state .zero-state-icon		{ filter: invert(1); }
+
+.folder-block:hover 					{ background-color:rgba(255,255,255,0.05)!important; }
+.folder-block:hover .folder-block__wrapper::before, 
+.folder-block:hover .folder-block__wrapper::after { background:var(--wdt-default-color-15)!important; }
+wrike-compact-folder-card .folder-card__icon { color:var(--wdt-default-color-60)!important; }
+wrike-compact-folder-card .folder-card__info-container { border-bottom-color:var(--wdt-default-color-15)!important; }
+wrike-compact-folder-card .folder-card__title { color:var(--wdt-default-color-90)!important; }
+
+.inline-user-list-name					{ color:var(--wdt-default-color-60)!important; }
+
 
 /* ============================================================================================== */
 /* =======  CONTEXT MENU  ======================================================================= */
@@ -33,6 +48,11 @@ wrike-menu-v2 .select-list-item 		{ color: var(--wdt-default-color-90)!important
 wrike-menu-v2 .select-list-item.is-focused,
 .x-menu-item-active						{ background-color: var(--wdt-default-color-15)!important; }
 
+.sortmode-option						{  }
+.sortmode-option:hover					{ background:var(--wdt-default-color-15)!important;  }
+.sortmode-option__icon					{ color:var(--wdt-focus)!important }
+.sortmode-option__label					{ color:var(--wdt-default-color)!important }
+
 .x-menu-sep							 	{ border-bottom-color:var(--wdt-default-color-15)!important; background:transparent!important; }
 wrike-divider .divider-section::after, 
 wrike-divider .divider-section::before 	{ border-top-color:var(--wdt-default-color-15)!important; }
@@ -41,6 +61,22 @@ wrike-divider.task-list-group-divider .divider-section::after,
 wrike-divider.task-list-group-divider .divider-section::before 	{ border-top-color:transparent!important; }
 
 .divider-header							{ color:var(--wdt-default-color-60)!important }
+
+
+/* ============================================================================================== */
+/* =======  FILTER  ============================================================================= */
+/* ============================================================================================== */
+
+.folder-filter-list .filter-list-label	{ color:var(--wdt-default-color-60)!important }
+ws-folder-sort-order [wrike-button-v2]:not(.wrike-disabled):hover, 
+ws-folder-sort-order [wrike-button-v2]:not(:disabled):hover, 
+ws-folder-sort-order [wrike-button-v2]:not(.wrike-disabled):focus, 
+ws-folder-sort-order [wrike-button-v2]:not(:disabled):focus { background:var(--wdt-focus)!important; color:var(--wdt-default-color)!important  }
+.wspace-folder-filterlist-tagitem		{ color:var(--wdt-focus)!important; }
+.wspace-folder-filterlist-tagitem:not(.wrike-disabled):hover,
+.wspace-folder-filterlist-tagitem:not(:disabled):hover,
+.wspace-folder-filterlist-tagitem:not(.wrike-disabled):focus, 
+.wspace-folder-filterlist-tagitem:not(:disabled):focus { background:var(--wdt-focus)!important; color:var(--wdt-default-color)!important  }
 
 /* ============================================================================================== */
 /* =======  SIDEBAR  ============================================================================ */
@@ -105,7 +141,12 @@ ws-task-title .title-field				{ background:var(--wdt-default-bg)!important; colo
 ws-auto-updates-mode-switcher			{ background:var(--wdt-default-bg)!important; }
 ws-task-customfield-list				{ border-color:var(--wdt-default-color-15)!important; }
 
-/* description editor */
+
+/* ============================================================================================== */
+/* =======  TASK DESCRIPTION  =================================================================== */
+/* ============================================================================================== */
+
+/* old version */
 .le-placeholder							{ color:var(--wdt-default-color-30)!important; }
 .le-toolbar								{ background:var(--wdt-default-bg)!important; }
 .le-toolbar.toolbar-style-subtle [wrike-button-v2]:not(:disabled).skin-action, 
@@ -118,13 +159,45 @@ ws-task-customfield-list				{ border-color:var(--wdt-default-color-15)!important
 .le-toolbar.toolbar-style-subtle [wrike-button-v2]:not(:disabled).skin-critical:active 
 										{ background:var(--wdt-focus)!important; color:var(--wdt-default-color)!important; }
 
-/* comment stream */
+
+/* new version */
+.wspace-liveeditorv2-editor .quill-container { color:var(--wdt-default-color-90)!important; }
+.ql-editor a, 
+.ql-editor a:visited 					{ color:var(--wdt-focus)!important; }
+.ql-editor ul[data-checked="true"] li	{ color:var(--wdt-default-color-60)!important; text-decoration:line-through; }
+.ql-editor ul[data-checked="false"]:not(:hover) { background-image:none; position:relative; }
+.ql-editor ul[data-checked="false"]:not(:hover):before { content:""; width:11px; height:11px; background:#000!important; border:1px solid var(--wdt-default-color-60)!important; 
+												position:absolute; left:0; top: 5px; }
+
+
+/* ============================================================================================== */
+/* =======  ATTACHMENTS  ======================================================================== */
+/* ============================================================================================== */
+
+wrike-attachments-list-item .cell		{ color:var(--wdt-default-color-60)!important; }
+wrike-attachments-filename				{ color:var(--wdt-default-color-90)!important; }
+
+
+/* ============================================================================================== */
+/* =======  STREAM  ============================================================================= */
+/* ============================================================================================== */
+
+.stream-panel .root-link				{ color:var(--wdt-default-color)!important; }
+.wspace-stream-comment .fake-field, 
+.wspace-task-widgets-comment .fake-field { border:1px solid var(--wdt-default-color-15)!important; }
+.wspace-stream-comment .fake-field .btn-attach:not(:hover), 
+.wspace-task-widgets-comment .fake-field .btn-attach:not(:hover) { filter:invert(1) }
+.wspace-stream-comment .fake-field .fld-text, 
+.wspace-task-widgets-comment .fake-field .fld-text { color:var(--wdt-default-color-30)!important; }
+
 .stream-entry .expand-link, 
 .stream-entry .expand-link-loading		{ background:var(--wdt-focus-20)!important; color:var(--wdt-focus)!important; }
 .stream-entry							{ background:var(--wdt-default-bg)!important; color:var(--wdt-default-color)!important; }
 .stream-entry .comment-changes .changes-item { color:var(--wdt-default-color-60)!important; }
 .stream-entry .highlight				{ color:var(--wdt-focus)!important; }
 .stream-entry .comment .date-container .date { background:var(--wdt-default-bg)!important; color:var(--wdt-default-color-60)!important; }
+
+.stream-entry .changes-item a			{ color:var(--wdt-focus)!important; }
 
 /* comment editor */
 .stream-comment-box .editor-outline,
@@ -137,12 +210,30 @@ ws-task-customfield-list				{ border-color:var(--wdt-default-color-15)!important
 .activity-stream-textarea-ce .CodeMirror{ color:var(--wdt-default-color)!important; background-color:var(--wdt-default-bg)!important; }
 .CodeMirror div.CodeMirror-cursor		{ border-left-color:var(--wdt-default-color)!important; }
 
+/* Sidebar */
+.stream-view .wrike-panel-header		{ background-color:var(--wdt-default-bg)!important; }
+.wrike-panel-title, 
+.wrike-record-batchsaver-errortip .wrike-tip-header, 
+.wspace-export-exceltip .wrike-tip-header, 
+.wspace-timeline-snapshot-info-tooltip .wrike-tip-header-text { color:var(--wdt-default-color)!important; }
+
+
+/* ============================================================================================== */
+/* =======  BOARD VIEW  ========================================================================= */
+/* ============================================================================================== */
+
+ws-folder-header-bottom					{ background-color:var(--wdt-default-bg)!important; }
+
+.boards-container						{ background-color:var(--wdt-default-bg)!important; border-top:1px solid var(--wdt-default-color-15)!important; }
+.boards-column-inner .header			{ color:var(--wdt-default-color)!important; }
+.boards-column-inner .header .count		{ color:var(--wdt-default-color-60)!important; }
 
 /* ============================================================================================== */
 /* =======  CREATE TASK OVERLAY  ================================================================ */
 /* ============================================================================================== */
 
 .wspace-task-body .ext-el-mask			{ background:#000 }
+
 
 /* ============================================================================================== */
 /* =======  MY WORK  ============================================================================ */
@@ -158,3 +249,5 @@ ws-task-customfield-list				{ border-color:var(--wdt-default-color-15)!important
 
 .wspace-mywork .w4-tasklist .x-grid3-row-selected { background:var(--wdt-focus)!important; }
 .wspace-mywork .x-grid3-row-over		{ background:var(--wdt-focus-50)!important; }
+.wspace-mywork .wspace-mywork-newtask .wspace-mywork-newtask-plus { background-color:var(--wdt-default-bg)!important; color:var(--wdt-focus)!important; }
+.wspace-mywork .w4-tasklist-group-row .w4-tasklist-group-row-wrap { border-top:1px solid var(--wdt-default-color-15)!important; border-bottom:1px solid var(--wdt-default-color-15)!important; }
