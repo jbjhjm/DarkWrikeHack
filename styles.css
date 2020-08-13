@@ -86,6 +86,8 @@ body.dpu #folderTreeView				{ background:var(--theme-background-color)!important
 #folder-tab								{ background:var(--theme-background-color)!important; }
 .dpu .wspace-navigation-view .wspace-tree-color { width:10px !important; }
 .dpu .wspace-navigation-view .wspace-tree-sub-root .wspace-tree-branch { padding-left:0!important; }
+.dpu .wspace-navigation-view .wspace-tree-sub { padding-left:10px!important }
+.dpu .wspace-navigation-view .wspace-tree-sub .wspace-tree-color { width:20px !important; }
 body.dpu .wspace-navigation-view .wspace-tree-sub-root .x-tree-node-el { padding:0!important; }
 .dpu .wspace-navigation-view .wspace-tree-title { z-index: 52!important; position: relative!important; /*background: rgba(49, 58, 66, 0.85)!important;*/ padding-left: 10px!important; }
 
@@ -109,6 +111,8 @@ ws-toolbar								{ border-bottom-color:var(--wdt-default-color-15)!important; }
 .show-descendants-item 					{ background:var(--wdt-default-bg)!important; color:var(--wdt-default-color)!important; border-bottom-color:var(--wdt-default-color-15)!important; }
 .show-descendants-item__text 			{ color:var(--wdt-default-color-90)!important; }
 
+.task-list-toolbar						{ background-color: #15181b!important; }
+
 wrike-task-list							{ background:var(--wdt-default-bg)!important; color:var(--wdt-default-color)!important; }
 wrike-task-title						{ color:var(--wdt-default-color-90)!important; }
 .task-info-container					{ border-bottom-color:var(--wdt-default-color-15)!important }
@@ -128,7 +132,8 @@ wrike-task-title						{ color:var(--wdt-default-color-90)!important; }
 /* ============================================================================================== */
 
 .wspace-task-widgets-title-view textarea,
-ws-task-title .title-field				{ background:var(--wdt-default-bg)!important; color:var(--wdt-default-color)!important; }
+/* ws-task-title .title-field				{ background:var(--wdt-default-bg)!important; color:var(--wdt-default-color)!important; } */
+ws-task-title .title__field 			{ background:var(--wdt-default-bg)!important; color:var(--wdt-default-color)!important; }
 .wspace-task-widgets-author				{ color:var(--wdt-default-color)!important; }
 
 .wspace-task-settings-button			{ color:var(#fff)!important; text-shadow:0 1px 1px #fff!important; filter:invert(1)!important; font-weight: bold!important; }
@@ -140,7 +145,7 @@ ws-task-title .title-field				{ background:var(--wdt-default-bg)!important; colo
 .wspace-task-widgets-approvals-bar 		{ border-top: 1px solid rgba(255, 255, 255, 0.16); background: var(--wdt-default-color-05); }
 ws-auto-updates-mode-switcher			{ background:var(--wdt-default-bg)!important; }
 ws-task-customfield-list				{ border-color:var(--wdt-default-color-15)!important; }
-
+.status-bar__author						{ color:var(--wdt-default-color-60)!important }
 
 /* ============================================================================================== */
 /* =======  TASK DESCRIPTION  =================================================================== */
@@ -200,6 +205,7 @@ wrike-attachments-filename				{ color:var(--wdt-default-color-90)!important; }
 .stream-entry .changes-item a			{ color:var(--wdt-focus)!important; }
 
 /* comment editor */
+.stream-comment-box						{ color:var(--wdt-default-color)!important; }
 .stream-comment-box .editor-outline,
 .wspace-task-widgets-comment .main-ct	{ color:var(--wdt-default-color)!important; background-color:var(--wdt-default-bg)!important; border-top:1px solid var(--wdt-default-color-15)!important; }
 .stream-comment-box .attach-button:not(:hover) { filter:invert(1);  }
@@ -209,6 +215,8 @@ wrike-attachments-filename				{ color:var(--wdt-default-color-90)!important; }
 .stream-comment-box .editor_commit		{ background:var(--wdt-focus)!important; }
 .activity-stream-textarea-ce .CodeMirror{ color:var(--wdt-default-color)!important; background-color:var(--wdt-default-bg)!important; }
 .CodeMirror div.CodeMirror-cursor		{ border-left-color:var(--wdt-default-color)!important; }
+task-comment-editor-button				{ color:var(--wdt-default-color)!important; }
+task-comment-editor						{ border-color:rgba(255,255,255,.4)!important; }
 
 /* Sidebar */
 .stream-view .wrike-panel-header		{ background-color:var(--wdt-default-bg)!important; }
