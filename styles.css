@@ -105,6 +105,14 @@ ws-toolbar								{ border-bottom-color:var(--wdt-default-color-15)!important; }
 	color:var(--wdt-focus)!important
 }
 
+/* view item tab buttons */
+.collapsible-view-item__control			{ color:var(--wdt-default-color-60)!important; }
+.collapsible-view-item--selected .collapsible-view-item__control { color:var(--wdt-default-color-90)!important; }
+
+
+/* task type dropdown */
+.task-context-creation__suggest-button	{ color:var(--wdt-default-color)!important; }
+
 
 .folder-header-toolbar,
 .browse-view-task-creation,
@@ -146,6 +154,7 @@ ws-task-title .title__field 			{ background:var(--wdt-default-bg)!important; col
 ws-auto-updates-mode-switcher			{ background:var(--wdt-default-bg)!important; }
 ws-task-customfield-list				{ border-color:var(--wdt-default-color-15)!important; }
 .status-bar__author						{ color:var(--wdt-default-color-60)!important }
+.inline-contact-list-name				{ color:var(--wdt-default-color-90)!important }
 
 /* ============================================================================================== */
 /* =======  TASK DESCRIPTION  =================================================================== */
@@ -167,13 +176,12 @@ ws-task-customfield-list				{ border-color:var(--wdt-default-color-15)!important
 
 /* new version */
 .wspace-liveeditorv2-editor .quill-container { color:var(--wdt-default-color-90)!important; }
+.ql-editor 			 					{ color:var(--wdt-default-color)!important; }
 .ql-editor a, 
 .ql-editor a:visited 					{ color:var(--wdt-focus)!important; }
 .ql-editor ul[data-checked="true"] li	{ color:var(--wdt-default-color-60)!important; text-decoration:line-through; }
-.ql-editor ul[data-checked="false"]:not(:hover) { background-image:none; position:relative; }
-.ql-editor ul[data-checked="false"]:not(:hover):before { content:""; width:11px; height:11px; background:#000!important; border:1px solid var(--wdt-default-color-60)!important; 
-												position:absolute; left:0; top: 5px; }
-
+.ql-editor ul[data-checked="false"] li:not(:hover) { background-image:none; position:relative; }
+.ql-editor ul[data-checked="false"] li:not(:hover)::before { content:""; width:12px; height:12px; background:#000!important; border:1px solid var(--wdt-default-color-60)!important; position:absolute; left:-3px; top: 7px; }
 
 /* ============================================================================================== */
 /* =======  ATTACHMENTS  ======================================================================== */
@@ -201,7 +209,7 @@ wrike-attachments-filename				{ color:var(--wdt-default-color-90)!important; }
 .stream-entry .comment-changes .changes-item { color:var(--wdt-default-color-60)!important; }
 .stream-entry .highlight				{ color:var(--wdt-focus)!important; }
 .stream-entry .comment .date-container .date { background:var(--wdt-default-bg)!important; color:var(--wdt-default-color-60)!important; }
-
+.stream-entry .comment .time-ct			{ color:var(--wdt-default-color-60)!important; }
 .stream-entry .changes-item a			{ color:var(--wdt-focus)!important; }
 
 /* comment editor */
@@ -259,3 +267,12 @@ ws-folder-header-bottom					{ background-color:var(--wdt-default-bg)!important; 
 .wspace-mywork .x-grid3-row-over		{ background:var(--wdt-focus-50)!important; }
 .wspace-mywork .wspace-mywork-newtask .wspace-mywork-newtask-plus { background-color:var(--wdt-default-bg)!important; color:var(--wdt-focus)!important; }
 .wspace-mywork .w4-tasklist-group-row .w4-tasklist-group-row-wrap { border-top:1px solid var(--wdt-default-color-15)!important; border-bottom:1px solid var(--wdt-default-color-15)!important; }
+
+
+
+/* ============================================================================================== */
+/* =======  FLOATING  =========================================================================== */
+/* ============================================================================================== */
+
+.floating-panel__content				{ background:var(--light-secondary-10-backgroundColor)!important; }
+wrike-floating-panel-v2.theme-default	{ box-shadow: 4px 8px 17px rgb(0 0 0 / 86%); }

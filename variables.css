@@ -11,4 +11,7 @@
 	--wdt-focus-20: rgba(17, 148, 187, 0.2)!important;
 	--theme-background-color:#373b3e!important;
 	--theme-color-folder-selected: rgba(17, 148, 187, 0.43)!important;
+
+	--light-secondary-10-backgroundColor: #272f35!important;
+	--light-neutral-45-textColor: rgba(255,255,255,.56)!important;
 }
